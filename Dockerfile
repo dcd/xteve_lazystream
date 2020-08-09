@@ -23,7 +23,7 @@ RUN apk upgrade --update --no-cache \
             ffmpeg \
             vlc \
             gnutls-utils
-                       
+
 # Update Timezone
 ENV TZ=America/Los_Angeles
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
@@ -69,10 +69,11 @@ ENV PUID=1000 \
     use_lazystream=yes \
     include_nhl=yes\
     include_mlb=yes \
+    cdn=akc \
     use_guide2go=no \
     JsonList="CBLguide.json SATguide.json SATSport.json" \
     use_embyAPI=no \
-    embyIP= \ 
+    embyIP= \
     embyPORT=8096 \
     embyApiKey= \
     embyID= \
